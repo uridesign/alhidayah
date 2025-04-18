@@ -1,6 +1,6 @@
 <?php
-  // $baseurl = 'http://localhost:8888/html/uri/alhidayah';
-  $baseurl = 'https://alhidayah.infodkm.com';
+  $baseurl = 'http://localhost:8888/html/uri/alhidayah';
+  // $baseurl = 'https://alhidayah.infodkm.com';
 ?>
 
 <link rel="shortcut icon" href="<?php echo $baseurl; ?>/images/global/favicon.png" type="image/png">
