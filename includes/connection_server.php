@@ -12,4 +12,6 @@
     die("Connection failed: " . $conn->connect_error);
   }
 
+  date_default_timezone_set('Asia/Jakarta');
+
 ?>
