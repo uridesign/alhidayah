@@ -1,0 +1,203 @@
+/*.textboxwrap {
+	display: inline-block;
+	background: transparent url(Images/Global/textbox_r.png) no-repeat top right;
+	border: none;
+	border-width: 0;
+	padding-right: 4px;
+	height: 32px;
+}
+.textboxwrap .textbox {
+	background: transparent url(Images/Global/textbox_l.png) no-repeat top left;
+	border: none;
+	border-width: 0;
+	padding: 0 0 0 8px;
+	height: 32px;
+	line-height: 32px;
+	vertical-align: middle;
+}
+.dropdownlistwrap {
+	background: transparent url(Images/Global/dropdownlist_r.png) no-repeat top right;
+	display: inline-block;
+	position: relative;
+	height: 30px;
+	padding: 0 25px 0 0;
+	border: none;
+	border-width: 0;
+	width: 1px;
+}
+.dropdownlistwrap .dropdownlist {
+	border: none;
+	border-width: 0;
+	padding: 0;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+}
+.dropdownlistwrap .dropdownlistselector {
+	background: transparent url(Images/Global/dropdownlist_l.png) no-repeat top left;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 8px;
+	cursor: default;
+	z-index: 1;
+	white-space: nowrap;
+}*/
+
+input[type="text"].form-control:focus,
+input[type="password"].form-control:focus,
+textarea.form-control:focus,
+select.form-control-select:focus { outline: none;}
+
+input[type="text"].form-control,
+input[type="password"].form-control,
+textarea.form-control,
+select.form-control-select {
+	width: 100%;
+  padding: .7em 1em;
+  color: #606060;
+  line-height: 1;
+  border: 1px solid #eee;
+	border-radius: .25rem;
+}
+
+textarea.form-control {
+	padding: .85em 1em;
+	line-height: 1.2;
+}
+
+select.form-control-select {
+	padding: .64em 1em;
+}
+
+// .dropdownlistwrap {
+// 	position: relative;
+// 	display: block;
+// 	padding: .443em 0 .6em;
+// 	line-height: 1;
+// 	border: 1px solid #eee;
+// 	border-width: 0 0 1px;
+// }
+// .dropdownlistwrap:after {
+// 	position: absolute;
+// 	top: 4px;
+// 	right: 0;
+// 	content: "\f107";
+// 	font-family: "Font Awesome 5 Free";
+//   font-weight: 900;
+// }
+// .dropdownlistwrap > .dropdownlist {
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// }
+// .dropdownlistwrap > .dropdownlistselector { display: block; line-height: 1;}
+
+.checkboxwrap {
+	position: relative;
+	display: inline-block;
+	/*background: url(Images/Global/checkbox.png) no-repeat*/;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+}
+a.checkboxwrap,
+a.checkboxwrap:hover { color: #a9a9a9;}
+.checkboxwrap i { vertical-align: top;}
+// .checkboxwrap.active { background: url(Images/Global/checkbox_active.png) no-repeat;}
+.checkboxwrap input[type="checkbox"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+
+.radiowrap {
+	position: relative;
+	display: inline-block;
+	/*background: url(Images/Global/radio.png) no-repeat;*/
+	width: 16px;
+	height: 16px;
+	text-align: center;
+}
+a.radiowrap,
+a.radiowrap:hover { color: #a9a9a9;}
+.radiowrap i { vertical-align: top;}
+// .radiowrap.active { background: url(Images/Global/radio_active.png) no-repeat;}
+.radiowrap input[type="radio"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+
+.form {
+	&-item {
+		position: relative;
+		&.form-placeholder,
+		&.form-placeholder-select {
+			.form-label {
+				position: absolute;
+				top: 10px;
+				left: 17px;
+				font-size: 1rem;
+				color: #ccc;
+				transition: all ease .3s;
+			}
+			&.filled,
+			&.form-placeholder-disabled {
+				.form-label {
+					background: #fff;
+					top: -8px;
+					left: 12px;
+					padding: 1px 6px;
+					font-size: .6rem;
+					color: rgb(var(--cl-secondary));
+				}
+			}
+		}
+		&.form-placeholder-select {
+			&:not(.form-placeholder-disabled) {
+				.form-label {
+					opacity: 0;
+					transform: translateY(-100%);
+					transition: all ease .3s;
+				}
+				&.filled {
+					.form-label {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+			}
+		}
+	}
+	&-label {
+		font-size: .9rem;
+		color: rgb(var(--cl-secondary));
+	}
+}
+
+// Form with grid
+.form {
+	.row {
+		.form-placeholder,
+		.form-placeholder-select {
+			.form-label {
+				left: 29px;
+			}
+		}
+	}
+}

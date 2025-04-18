@@ -1,0 +1,32 @@
+@use '../bootstrap/' as grid;
+
+.sitemap-list {
+  @include grid.media-breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 15px;
+  }
+  a {
+    position: relative;
+    display: block;
+    background-color: rgb(var(--cl-secondary));
+    margin-bottom: 1em;
+    padding: 1em 1em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2em;
+    &:hover {
+      background-color: rgb(var(--cl-accent-1));
+    }
+    & > i {
+      position: absolute;
+      top: 50%;
+      left: 1em;
+      width: 23px;
+      font-size: 1.3rem;
+      text-align: center;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use '../bootstrap' as *;
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#header, #footer {
+  flex: 0 0 auto;
+}
+#content {
+  flex: 1 0 0;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+}
+
+.top-curve {
+  background-color: rgb(var(--cl-accent-3));
+  height: 100%;
+  padding: 1em 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  @include media-breakpoint-up(md) {
+    padding: 3em 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  border: none;
+}
+img.hero {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content_center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  @include media-breakpoint-up(md) {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+h1.page-title {
+  padding-top: 1em;
+  font-size: 1.7rem;
+}

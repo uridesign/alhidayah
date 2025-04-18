@@ -1,0 +1,1 @@
+<script type="text/javascript" src="<?php echo $baseurl; ?>/js/site.js"></script>

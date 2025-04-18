@@ -1,0 +1,23 @@
+@use '../bootstrap' as *;
+
+#header {
+  background: white;
+  padding: .8em 0;
+  .wrapper {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+#logo {
+  display: block;
+  width: 115px;
+  @include media-breakpoint-up(md) {
+    width: 140px;
+  }
+  img {
+    display: block;
+  }
+}

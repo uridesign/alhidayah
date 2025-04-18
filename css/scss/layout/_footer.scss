@@ -1,0 +1,8 @@
+@use '../bootstrap' as *;
+
+#footer {
+  background: rgb(var(--cl-primary));
+  padding: 15px 15px;
+  font-size: 0.8rem;
+  color: white;
+}

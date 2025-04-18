@@ -1,0 +1,36 @@
+.panelTuning {
+  display: flex;
+  flex-wrap: wrap;
+  input.form-control {
+    border-radius: 0;
+    text-align: center;
+    border-style: solid;
+    border-color: #ced4da;
+    border-width: 1px 1px;
+  }
+  button {
+    flex: 0 0 35px;
+    max-width: 35px;
+    background: rgb(var(--cl-accent-2));
+    color: rgb(var(--cl-secondary));
+    border: 1px solid #ced4da;
+    &:first-child {
+      border-right: 0;
+      border-top-left-radius: .25rem;
+      border-bottom-left-radius: .25rem;
+    }
+    &:last-child {
+      border-left: 0;
+      border-top-right-radius: .25rem;
+      border-bottom-right-radius: .25rem;
+    }
+    &:hover {
+      background: rgb(var(--cl-accent-1));
+    }
+  }
+  input {
+    flex: 1 0 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}

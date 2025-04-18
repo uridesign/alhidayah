@@ -1,0 +1,46 @@
+@use '../bootstrap/' as *;
+
+.card {
+  &-menu {
+    position: relative;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 1.5em 10px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 0;
+    @include media-breakpoint-up(md) {
+      padding: 4em 10px;
+    }
+    &::after {
+      background: rgb(var(--cl-accent-3));
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: " ";
+      width: 100%;
+      height: 100%;
+      opacity: .6;
+      z-index: -1;
+    }
+    h3 {
+      margin: 0;
+      font-size: .75rem;
+      @include media-breakpoint-up(md) {
+        font-size: 1.1rem;
+      }
+    }
+    i {
+      margin-bottom: .7em;
+      font-size: 1.5rem;
+      color: rgb(var(--cl-secondary));
+      @include media-breakpoint-up(md) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

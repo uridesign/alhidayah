@@ -1,0 +1,89 @@
+@use '../bootstrap' as *;
+@use '../config' as *;
+
+.banner {
+  &-bg {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 3em 0;
+    z-index: 0;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: " ";
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+  }
+  &-wrap {
+    
+    // Banner image text horizontal
+    &.banner-h-image {
+      @include media-breakpoint-up(md) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      &.banner-h-reverse {
+        @include media-breakpoint-up(md) {
+          flex-direction: row-reverse;
+        }
+      }
+      .banner {
+        &-image,
+        &-text {
+          @include media-breakpoint-up(md) {
+            padding-left: 15px;
+            padding-right: 15px;
+            flex: 0 0 50%;
+          }
+        }
+        &-text {
+          color: rgb(var(--cl-secondary));
+          h1 {
+            color: rgb(var(--cl-secondary));
+          }
+        }
+        &-image {
+          margin-bottom: 2em;
+          @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+          }
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    // Banner center
+    &.banner-c {
+      @include media-breakpoint-up(md) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 315px;
+      }
+      .banner {
+        &-text {
+          color: rgb(var(--cl-secondary));
+          text-align: center;
+          h1 {
+            color: rgb(var(--cl-secondary));
+          }
+        }
+        &-image {
+          text-align: center;
+        }
+      }
+    }
+  }  
+}

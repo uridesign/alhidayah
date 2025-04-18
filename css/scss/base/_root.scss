@@ -1,0 +1,10 @@
+@use '../config' as *;
+
+:root {
+  --font-primary: 'Nunito', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
+
+  @each $prop, $val in $theme-colors {
+    --cl-#{$prop}: #{$val};
+  }
+}

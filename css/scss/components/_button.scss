@@ -1,0 +1,55 @@
+@use '../config' as *;
+
+.btn {
+  display: inline-block;
+}
+
+.button-1 {
+  background: #0095ff;
+  padding: .8em 1.5em;
+  font-family: var(--font-primary);
+  color: #fff;
+  line-height: 1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  &:link {
+    color: #fff;
+    text-decoration: none;
+    span {
+      padding: 0;
+    }
+  }
+  &:hover {
+    background: #3caeff;
+    color: #fff;
+  }
+  @at-root button#{&} {
+    padding: .8em 1.5em;
+  }
+  @at-root input#{&} {
+    padding: .8em 1.5em;
+  }
+}
+
+.button-2 {
+  background: #d41515;
+  padding: 5px 10px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:link {
+    color: #fff;
+    text-decoration: none;
+  }
+  &:hover {
+    background: #ff2020;
+    color: #fff;
+  }
+}
+
+.btn.disabled {
+  background: #a9a9a9;
+}

@@ -1,0 +1,48 @@
+@use '../bootstrap/' as grid;
+
+.kajian_card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.03);
+  padding: 15px;
+  @include grid.media-breakpoint-up(sm) {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+  }
+  .top-card {
+    @include grid.media-breakpoint-up(sm) {
+      flex: 1 0 0;
+    }
+    h2 {
+      font-size: 1rem;
+      color: rgb(var(--cl-accent-1));
+      line-height: 1.4;
+    }
+    h3 {
+      font-family: var(--font-primary);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: rgb(var(--cl-secondary));
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+  .bottom-card {
+    padding-top: 1em;
+    .button-1 {
+      margin-bottom: .5em;
+      width: 100%;
+      text-align: center;
+    }
+    .bottom-panel {
+      text-align: center;
+      a {
+        display: inline-block;
+        padding: .5em 1em;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
