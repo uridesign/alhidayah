@@ -1,6 +1,7 @@
 <?php
   // Session check login required  
-  // include('includes/session_check.php');
+  include('includes/session_check.php');
+  
   $page_name = "broadcast";
 
   $botApiToken = '5163636753:AAFfQCA9MAGxLUvZa8ZBhOHTPQNPQ_MyKp4';
