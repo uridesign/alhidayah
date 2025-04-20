@@ -136,7 +136,7 @@
       stream_link + ' <br><br>'+
       '➖➖➖➖➖➖➖➖➖<br><br>'+
       'Silahkan kunjungi : <br><br>'+
-      '🌐 https://linktr.ee/masjidalhidayah';
+      '🌐 https://alhidayah.infodkm.com';
 
       $('#code').val( copy_text.replace(/&nbsp;/g, ' ').replace(/<br\s*[\/]?>/gi, "\n") );
       
