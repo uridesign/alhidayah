@@ -1,5 +1,5 @@
 <div class="wrapper">
-	<a id="logo" href="./">
+	<a id="logo" href="<?php echo $baseurl; ?>/">
 		<img src="<?php echo $baseurl; ?>/images/global/logo.png" alt="logo" />
 	</a>
 	<div id="main-menu">
