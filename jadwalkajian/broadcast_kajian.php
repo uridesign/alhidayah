@@ -138,8 +138,7 @@
 
       var copy_text = '*📢 INFO KAJIAN MASJID AL-HIDAYAH*<br><br>'+
       'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم<br><br>'+
-      'Hadirilah Majelis Ilmu<br>'+
-      'Kajian Islam Ilmiah Untuk Umum<br><br>'+
+      'Hadirilah Kajian Islam Ilmiah Untuk Umum<br><br>'+
       'In Syaa Allah<br><br>'+
       '_📖 Tema_<br>'+
       '*'+ title +''+ episode +'*<br>'+
@@ -152,18 +151,16 @@
       '_🕓 Waktu_<br>'+
       '*'+ time +' - Selesai*<br><br>'+
       '_🕌 Tempat_<br>*Masjid Al-Hidayah*<br>'+ 
-      'Jl. Batu Bulan No.27<br>Kapuk Cengkareng Jakarta Barat<br>(Dekat SMP.100)<br>'+
+      'Jl. Batu Bulan No.27 Kapuk Cengkareng Jakarta Barat<br>'+
       'Link lokasi: https://maps.app.goo.gl/bAwDrrUFeu5FJzuS9<br><br>'+
       '_☎ Informasi Lanjut_<br>'+ 
-      '*Ikhwan*:<br>'+ 
-      '081295562662<br>085283515225<br><br>'+
-      '*Akhwat*:<br>'+
-      '081219544878<br>082110150517<br><br>'+
+      '081295562662 (Ikhwan)<br>'+ 
+      '081219544878 (Akhwat)<br><br>'+
       '_Social Media_<br>'+ 
       'Youtube: https://youtube.com/@masjidalhidayahkapuk<br>'+
       'Instagram: https://instagram.com/masjidalhidayahkapuk<br>'+
       'Facebook: https://facebook.com/masjidalhidayahkapuk<br>'+
-      'Telegram: https://t.me/masjidalhidayahkapuk<br><br>'+
+      'Website: https://alhidayah.infodkm.com/<br><br>'+
       '==============================<br><br>'+
       '*Donasi Dakwah Masjid Al-Hidayah:*<br>'+
       'Bank Syariah Indonesia<br>'+
@@ -181,8 +178,7 @@
 
       var copy_text_tg = '<b>📢 INFO KAJIAN MASJID AL-HIDAYAH</b><br><br>'+
       'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم<br><br>'+
-      'Hadirilah Majelis Ilmu<br>'+
-      'Kajian Islam Ilmiah Untuk Umum<br><br>'+
+      'Hadirilah Kajian Islam Ilmiah Untuk Umum<br><br>'+
       'In Syaa Allah<br><br>'+
       '<i>📖 Tema</i><br>'+
       '<b>'+ title +''+ episode +'</b><br>'+
@@ -195,18 +191,16 @@
       '<i>🕓 Waktu</i><br>'+
       '<b>'+ time +' - Selesai</b><br><br>'+
       '<i>🕌 Tempat</i><br><b>Masjid Al-Hidayah</b><br>'+ 
-      'Jl. Batu Bulan No.27<br>Kapuk Cengkareng Jakarta Barat<br>(Dekat SMP.100)<br>'+
+      'Jl. Batu Bulan No.27 Kapuk Cengkareng Jakarta Barat<br>'+
       'Link lokasi: https://maps.app.goo.gl/bAwDrrUFeu5FJzuS9<br><br>'+
       '<i>☎ Informasi Lanjut</i><br>'+ 
-      '<b>Ikhwan</b>:<br>'+ 
-      '081295562662<br>085283515225<br><br>'+
-      '<b>Akhwat</b>:<br>'+
-      '081219544878<br>082110150517<br><br>'+
+      '081295562662 (Ikhwan)<br>'+ 
+      '081219544878 (Akhwat)<br><br>'+
       '<i>Social Media</i><br>'+ 
       'Youtube: https://youtube.com/@masjidalhidayahkapuk<br>'+
       'Instagram: https://instagram.com/masjidalhidayahkapuk<br>'+
       'Facebook: https://facebook.com/masjidalhidayahkapuk<br>'+
-      'Telegram: https://t.me/masjidalhidayahkapuk<br><br>'+
+      'Website: https://alhidayah.infodkm.com/<br><br>'+
       '==============================<br><br>'+
       '<b>Donasi Dakwah Masjid Al-Hidayah:</b><br>'+
       'Bank Syariah Indonesia<br>'+
