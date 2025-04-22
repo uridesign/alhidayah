@@ -7,7 +7,7 @@
 
   $kajian=$_REQUEST['kajian'];
 
-  $query_kajian = "SELECT kajian.title AS kajian_title, kajian.episode, kajian.date, kajian.sholat, kajian.link, ustadz.name AS ustadz_name, kitab.name AS kitab_name, masjid.name AS masjid_name, masjid.detail FROM kajian INNER JOIN kitab ON kitab.id = kajian.kitab_id INNER JOIN ustadz ON ustadz.id = kajian.ustadz_id INNER JOIN masjid ON masjid.id = kajian.masjid_id WHERE kajian.id='".$kajian."'"; 
+  $query_kajian = "SELECT kajian.title AS kajian_title, kajian.episode, kajian.date, kajian.sholat, kajian.link, ustadz.name AS ustadz_name, ustadz.caption AS ustadz_caption, kitab.name AS kitab_name, masjid.name AS masjid_name, masjid.detail FROM kajian INNER JOIN kitab ON kitab.id = kajian.kitab_id INNER JOIN ustadz ON ustadz.id = kajian.ustadz_id INNER JOIN masjid ON masjid.id = kajian.masjid_id WHERE kajian.id='".$kajian."'"; 
   $result_kajian = mysqli_query($conn, $query_kajian) or die ( mysqli_error($conn));
   $row_kajian = mysqli_fetch_assoc($result_kajian);
 ?>
@@ -58,6 +58,7 @@
               <?php if( $row_kajian['episode'] > 1) echo '<p>Episode : '. $row_kajian['episode'] .'</p>' ?>
               <h2 class="h5" style="font-weight: 500"><span id="book"><?php echo 'Kajian ' . $row_kajian['kitab_name']?></span></h2>
               <h3 class="h6" style="font-weight: 600">Ustadz <span id="name"><?php echo $row_kajian['ustadz_name']?></span> حفظه الله</h3>
+              <p><em><span id="caption"><?php echo $row_kajian['ustadz_caption'];?></span></em></p>
               <p><span id="date"><?php echo $row_kajian['date']?></span></p>
 
               <div class="form row">
@@ -109,6 +110,8 @@
       var book = $('#book').text();
       var book_tg;
       var name = $('#name').text();
+      var caption = $('#caption').text();
+      var caption_tg;
       var date = $('#date').text();
       var time = $('#time').text();
 
@@ -116,6 +119,14 @@
         episode = ' [Ep.'+ episode +']';
       } else {
         episode = '';
+      };
+
+      if ( caption != '' ) { 
+        caption_tg = '<i>'+ caption +'</i><br>';
+        caption = '_'+ caption +'_<br>';
+      } else {
+        caption_tg = '';
+        caption = '';
       }
 
       moment.locale('id',{
@@ -144,7 +155,9 @@
       '*'+ title +''+ episode +'*<br>'+
       '_['+ book +']_<br><br>'+
       '_👤 Pemateri_<br>'+
-      '*Ustadz '+ name +' حفظه الله*<br><br>'+
+      '*Ustadz '+ name +' حفظه الله*<br>'+
+      caption +
+      '<br>'+
       '_🗓️ Hari/Tanggal_<br>'+
       '*'+ hj +'H*<br>'+
       day_name +', '+ date_selected_name +'<br><br>'+
@@ -184,7 +197,9 @@
       '<b>'+ title +''+ episode +'</b><br>'+
       '<i>['+ book +']</i><br><br>'+
       '<i>👤 Pemateri</i><br>'+
-      '<b>Ustadz '+ name +' حفظه الله</b><br><br>'+
+      '<b>Ustadz '+ name +' حفظه الله</b><br>'+
+      caption_tg +
+      '<br>'+
       '<i>🗓️ Hari/Tanggal</i><br>'+
       '<b>'+ hj +'H</b><br>'+
       day_name +', '+ date_selected_name +'<br><br>'+
