@@ -1,2 +1,3 @@
 includes/connection.php
+includes/session_check.php
 partials/head.php
