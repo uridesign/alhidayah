@@ -20,7 +20,8 @@
   // Check if the user is logged in, if not then redirect him to login page
   if(!isset($_SESSION["mah_loggedin"]) || $_SESSION["mah_loggedin"] !== true){
     $_SESSION['current_page'] = $_SERVER['REQUEST_URI'];
-    header("location: http://localhost:8888/html/uri/alhidayah/login.php");
+    // header("location: http://localhost:8888/html/uri/alhidayah/login.php");
+    header("location: https://alhidayah.infodkm.com/login.php");
     exit;
   }
 ?>
