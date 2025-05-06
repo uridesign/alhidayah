@@ -2,7 +2,7 @@
   // Initialize the session
   session_start();  
   
-  $timeout = 15;
+  $timeout = 24;
   $logout = "login.php";
 
   $timeout = $timeout * 60; // menit ke detik
