@@ -2,17 +2,17 @@
   // Initialize the session
   session_start();  
   
-  $timeout = 168;
+  $time = 14;
   $logout = "login.php";
 
-  $timeout = $timeout * 60; // menit ke detik
+  $timeout = $time * 24 * 60 * 60; // menit ke jam
   
   if(isset($_SESSION['start_session'])){
     $elapsed_time = time()-$_SESSION['start_session'];
     if($elapsed_time >= $timeout){
       session_destroy();
       // header("location: http://localhost:8888/html/uri/alhidayah/login.php");
-    header("location: https://alhidayah.infodkm.com/login.php");
+      header("location: https://alhidayah.infodkm.com/login.php");
     }
   }
 

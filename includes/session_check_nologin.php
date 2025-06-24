@@ -2,10 +2,10 @@
   // Initialize the session
   session_start();  
   
-  $timeout = 168;
+  $time = 14;
   $logout = "login.php";
 
-  $timeout = $timeout * 60; // menit ke detik
+  $timeout = $time * 24 * 60 * 60; // detik ke menit
   
   if(isset($_SESSION['start_session'])){
     $elapsed_time = time()-$_SESSION['start_session'];
