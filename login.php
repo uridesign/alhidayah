@@ -121,12 +121,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="form-item form-placeholder mb-3<?php echo (!empty($username_err)) ? ' has-error' : ''; ?>">
                   <label class="form-label">Username</label>
                   <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
-                  <div class="form-text text-danger"><em><?php echo $username_err; ?></em></div>
+                  <div class="form-text text-danger" style="color: red; font-size: .8em; padding-top: 5px"><em><?php echo $username_err; ?></em></div>
                 </div>    
                 <div class="form-item form-placeholder mb-3<?php echo (!empty($password_err)) ? ' has-error' : ''; ?>">
                   <label class="form-label">Password</label>
                   <input type="password" name="password" class="form-control">
-                  <div class="form-text text-danger"><em><?php echo $password_err; ?></em></div>
+                  <div class="form-text text-danger" style="color: red; font-size: .8em; padding-top: 5px"><em><?php echo $password_err; ?></em></div>
                 </div>
                 <input type="submit" class="btn button-1" value="Login">
                 <!--p>Don't have an account? <a href="register.php">Sign up now</a>.</p-->
