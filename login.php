@@ -64,6 +64,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               $_SESSION["id"] = $id;
               $_SESSION["username"] = $username;
 
+              $cookie_expiration_time = time() + (86400 * 30);
+              setcookie("remember_me_token", "some_unique_value", $cookie_expiration_time, "/");
+
               // Redirect user to welcome page
               if(isset($_SESSION['current_page'])) {
                 header('location: ' . $_SESSION['current_page']);

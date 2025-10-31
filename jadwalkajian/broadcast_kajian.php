@@ -52,8 +52,8 @@
             <div id="time"><?php echo $row_kajian['sholat'];?></div>
           </div>
 
-          <div class="row justify-content-center py-5">
-            <div class="col col-md-10">
+          <div class="justify-content-center py-5">
+            <div class="">
               <h1><span id="title"><?php echo $row_kajian['kajian_title'];?></span></h1>
               <?php if( $row_kajian['episode'] > 1) echo '<p>Episode : '. $row_kajian['episode'] .'</p>' ?>
               <h2 class="h5" style="font-weight: 500"><span id="book"><?php echo 'Kajian ' . $row_kajian['kitab_name']?></span></h2>
