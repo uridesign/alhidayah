@@ -36,7 +36,7 @@
     <main id="content">
       <div class="top-curve">
         <div class="wrapper">
-          <?php if ( isset($_SESSION["mah_loggedin"]) ) {?>
+          <?php if ( isset($_SESSION["session_username"]) ) {?>
           <div class="subpage-menu">
             <ul>
               <li><a href="./"><i class="fa-solid fa-calendar-days"></i>Jadwal Kajian</a></li>

@@ -1,16 +1,33 @@
 <?php
 // Initialize the session
 session_start();
- 
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["mah_loggedin"]) && $_SESSION["mah_loggedin"] === true){
-  header("location: index.php");
-  exit;
-}
- 
+
 // Include config file
 require_once "includes/connection.php";
 $page_name = 'login';
+
+// Check Cookie
+if(isset($_COOKIE['cookie_username'])){
+  $cookie_username = $_COOKIE['cookie_username'];
+  $cookie_password = $_COOKIE['cookie_password'];
+
+  $sql1 = "select * from users where username = '$cookie_username'";
+  $q1 = mysqli_query($conn, $sql1);
+  $r1 = mysqli_fetch_array($q1);
+  // print_r($r1['password']);
+  // echo '<br>';
+  // print_r($cookie_password);
+  if($r1['password'] == $cookie_password) {
+    $_SESSION['session_username'] = $cookie_username;
+    $_SESSION['session_password'] = $cookie_password;
+  }
+}
+ 
+// Check if the user is already logged in, if yes then redirect him to welcome page
+if(isset($_SESSION["session_username"])){
+  header("location: ./index.php");
+  exit;
+}
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -53,25 +70,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // Check if username exists, if yes then verify password
         if(mysqli_stmt_num_rows($stmt) == 1){                    
           // Bind result variables
-          mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+          mysqli_stmt_bind_result($stmt, $id, $username, $md5_password);
           if(mysqli_stmt_fetch($stmt)){
-            if(password_verify($password, $hashed_password)){
-              // Password is correct, so start a new session
-              session_start();
+            if(md5($password) === $md5_password){
               
               // Store data in session variables
-              $_SESSION["mah_loggedin"] = true;
-              $_SESSION["id"] = $id;
-              $_SESSION["username"] = $username;
+              $_SESSION["session_username"] = $username;
+              $_SESSION["session_password"] = md5($password);
+              
+              $cookie_name = "cookie_username";
+              $cookie_value = $username;
+              $cookie_time = time() + (86400 * 30);
+              setcookie($cookie_name, $cookie_value, $cookie_time, "/");
 
-              $cookie_expiration_time = time() + (86400 * 30);
-              setcookie("remember_me_token", "some_unique_value", $cookie_expiration_time, "/");
+              $cookie_name = "cookie_password";
+              $cookie_value = md5($password);
+              $cookie_time = time() + (86400 * 30);
+              setcookie($cookie_name, $cookie_value, $cookie_time, "/");
 
               // Redirect user to welcome page
               if(isset($_SESSION['current_page'])) {
                 header('location: ' . $_SESSION['current_page']);
               } else {
-                header('location: index.php');
+                header('location: ./index.php');
               }
               //echo $_SESSION['current_page'];
             } else{

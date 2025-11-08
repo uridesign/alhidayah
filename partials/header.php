@@ -22,7 +22,7 @@
 				<li><a href="<?php echo $baseurl; ?>/jadwalkajian" <?php echo ( $page_name != '' && $page_name == 'jadwalkajian' ) ? 'class="active"' : '';?> title=""><i class="fa-regular fa-calendar">&nbsp;</i> Jadwal Kajian</a></li>				
 				<li><a href="<?php echo $baseurl; ?>/sitemap" <?php echo ( $page_name != '' && $page_name == 'sitemap' ) ? 'class="active"' : '';?> title=""><i class="fa-solid fa-link">&nbsp;</i> Daftar Tautan</a></li>				
 				<?php 
-					if( isset($_SESSION["mah_loggedin"]) ) {
+					if( isset($_SESSION["session_username"]) ) {
 						echo '<li><a href="'. $baseurl .'/settings.php" title=""><i class="fa-solid fa-gear">&nbsp;</i> Settings</a></li>';
 						echo '<li><a href="'. $baseurl .'/logout.php" title=""><i class="fa-solid fa-right-from-bracket">&nbsp;</i> Logout</a></li>';
 					} else {
