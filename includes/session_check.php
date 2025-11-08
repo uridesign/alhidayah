@@ -7,8 +7,8 @@
 
   if(!isset($_SESSION['session_username'])) {
     $_SESSION['current_page'] = $_SERVER['REQUEST_URI'];
-    header("location: http://localhost:8888/html/uri/alhidayah/login.php");
-    // header("location: https://alhidayah.infodkm.com/login.php");
+    // header("location: http://localhost:8888/html/uri/alhidayah/login.php");
+    header("location: https://alhidayah.infodkm.com/login.php");
     exit();
   }
 ?>

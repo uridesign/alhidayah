@@ -62,7 +62,7 @@
               <p><span id="date"><?php echo $row_kajian['date']?></span></p>
 
               <div class="form row">
-                <div class="<?php echo ( isset($_SESSION["mah_loggedin"]) ) ? 'col-12 mb-3 col-md-6 mb-md-0' : 'col-12' ; ?>">
+                <div class="<?php echo ( isset($_SESSION["session_username"]) ) ? 'col-12 mb-3 col-md-6 mb-md-0' : 'col-12' ; ?>">
                   <div class="form-item mb-3">
                     <label class="form-label" for="">Preview Whatsapp</label>
                     <textarea name="code" id="code" class="form-control preview" rows="12" readonly></textarea>
@@ -71,7 +71,7 @@
                     <a href="javascript:;" id="copy" class="btn button-1">Copy to WhatsApp</a>
                   </div>
                 </div>
-                <?php if ( isset($_SESSION["mah_loggedin"]) ) {?>
+                <?php if ( isset($_SESSION["session_username"]) ) {?>
                 <div class="col-12 col-md-6">
                     <form id="preview_send_tg" action="./post_kajian.php" method="POST">
                       <div class="form-item mb-3">

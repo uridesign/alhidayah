@@ -44,14 +44,14 @@
             </ul>
           </div>
           <h1 class="page-title">Daftar Ustadz</h1>
-          <?php if ( isset($_SESSION["mah_loggedin"]) ) {?>
+          <?php if ( isset($_SESSION["session_username"]) ) {?>
             <p class="my-5 text-md-end"><a class="button-1" href="./input-ustadz.php">+ Tambah Ustadz</a></p>
           <?php } ?>
           <table class="data_list">
             <thead>
               <tr class="dtl-header">
                 <th>Nama ustadz</th>
-                <?php if ( isset($_SESSION["mah_loggedin"]) ) {?>
+                <?php if ( isset($_SESSION["session_username"]) ) {?>
                   <th>Action</th>  
                 <?php } ?>
               </tr>
@@ -68,7 +68,7 @@
                   <p><strong>Ustadz <?php echo $row['name'];?></strong></p>
                   <p><small><em><?php echo $row['caption'];?></em></small></p>
                 </td>
-                <?php if ( isset($_SESSION["mah_loggedin"]) ) {?>
+                <?php if ( isset($_SESSION["session_username"]) ) {?>
                   <td class="dtl-action">
                     <a class="link-edit" href="./edit-ustadz.php?id=<?php echo $row['id']?>" title="Edit"><i class="fa-regular fa-pen-to-square"></i></a>
                     <a class="link-delete" href="./delete-ustadz.php?id=<?php echo $row['id']?>" title="Delete" onclick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="fa-regular fa-trash-can" ></i></a>

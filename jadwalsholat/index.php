@@ -92,7 +92,7 @@
       <div id="mobile_button" class="text-center py-2">
         <a href="javascript:;" id="copy" class="btn btn-primary mr-2">Salin ke WhatsApp</a>
         <?php
-          if( isset($_SESSION["mah_loggedin"]) ) {
+          if( isset($_SESSION["session_username"]) ) {
         ?>
         <form id="preview_send_tg" action="post_waktu.php" method="POST" style="display: inline;">
           <textarea name="code_tg" id="code_tg" class="form-control hide"></textarea>

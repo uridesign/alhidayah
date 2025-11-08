@@ -63,7 +63,7 @@
                   <div class="bottom-card">
                     <a href="./broadcast_kajian.php?kajian=<?php echo $row['id']?>" class="btn button-1">Broadcast Kajain</a>
                     <a href="./broadcast_live.php?kajian=<?php echo $row['id']?>" class="btn button-1">Broadcast Live</a>
-                    <?php if ( isset($_SESSION["mah_loggedin"]) ) {?>
+                    <?php if ( isset($_SESSION["session_username"]) ) {?>
                       <div class="bottom-panel">
                         <a href="./edit-kajian.php?id=<?php echo $row['id']?>"><i class="fa-regular fa-pen-to-square"></i></a>
                         <a href="./delete-kajian.php?id=<?php echo $row['id']?>" onclick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="fa-regular fa-trash-can" ></i></a>
