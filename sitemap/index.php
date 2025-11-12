@@ -41,13 +41,13 @@
               </a>
             </div>
             <div>
-              <a href="https://chat.whatsapp.com/HpHdF4ydqQpGYxwhzcjHvZ" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Grup Ikhwan
+              <a href="https://wa.me/6281295562662" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Admin Ikhwan
               </a>
             </div>
             <div>
-              <a href="https://chat.whatsapp.com/JPLz0YPQGgSDwgXIKWZzhB" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Grup Akhwat
+              <a href="https://wa.me/6281219544878" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Admin Akhwat
               </a>
             </div>
             <div>
