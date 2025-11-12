@@ -25,7 +25,7 @@ if(isset($_COOKIE['cookie_username'])){
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["session_username"])){
-  header("location: ./index.php");
+  header("location: ./");
   exit;
 }
  
@@ -92,7 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               if(isset($_SESSION['current_page'])) {
                 header('location: ' . $_SESSION['current_page']);
               } else {
-                header('location: ./index.php');
+                header('location: ./');
               }
               //echo $_SESSION['current_page'];
             } else{
